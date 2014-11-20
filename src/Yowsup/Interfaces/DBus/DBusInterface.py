@@ -224,15 +224,15 @@ class DBusSignalInterface(SignalInterfaceBase, dbus.service.Object):
 
 
 	@dbus.service.signal(DBUS_INTERFACE)
-	def image_received(self, messageId, jid, preview, url, size, wantsReceipt = True):
+	def image_received(self, messageId, jid, preview, url, size, wantsReceipt = True,caption):
 		pass
 
 	@dbus.service.signal(DBUS_INTERFACE)
-	def video_received(self, messageId, jid, preview, url, size, wantsReceipt = True):
+	def video_received(self, messageId, jid, preview, url, size, wantsReceipt = True,caption):
 		pass
 
 	@dbus.service.signal(DBUS_INTERFACE)
-	def audio_received(self, messageId, jid, url, size, wantsReceipt = True):
+	def audio_received(self, messageId, jid, url, size, wantsReceipt = True,caption):
 		pass
 
 	@dbus.service.signal(DBUS_INTERFACE)
@@ -245,15 +245,15 @@ class DBusSignalInterface(SignalInterfaceBase, dbus.service.Object):
 
 
 	@dbus.service.signal(DBUS_INTERFACE)
-	def group_imageReceived(self, messageId, jid, author, preview, url, size, wantsReceipt = True):
+	def group_imageReceived(self, messageId, jid, author, preview, url, size, wantsReceipt = True,caption):
 		pass
 
 	@dbus.service.signal(DBUS_INTERFACE)
-	def group_videoReceived(self, messageId, jid, author, preview, url, size, wantsReceipt = True):
+	def group_videoReceived(self, messageId, jid, author, preview, url, size, wantsReceipt = True,caption):
 		pass
 
 	@dbus.service.signal(DBUS_INTERFACE)
-	def group_audioReceived(self, messageId, jid, author, url, size, wantsReceipt = True):
+	def group_audioReceived(self, messageId, jid, author, url, size, wantsReceipt = True,caption):
 		pass
 
 	@dbus.service.signal(DBUS_INTERFACE)
